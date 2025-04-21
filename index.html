@@ -1,47 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
     <script defer src="app.js"></script>
     <title>Snake Game</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="Header">
-            <nav class="nav-bar">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="snake.html">Snake Game</a></li>
-                    <li><a href="tetris.html">Tetris Game</a></li>
-                    <li><a href="about.html">About</a></li>
-                </ul>
-            </nav>
-                <img src="images/logo.png" alt="Logo" class="logo-image">
-        </div>  
+      <div class="Header">
+        <nav class="nav-bar">
+          <ul>
+            <li><a href="#">Snake Game</a></li>
+            <li><a href="#">How To Play</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </nav>
+        <img src="images/logo.png" alt="Logo" class="logo-image" />
+      </div>
     </header>
     <main>
-        <section>
-            <div class="game-container">
-                <div class="game-info">
-                    <h2>Snake Game</h2>
-                    <img src="images/snake.png" alt="Snake" class="snake-image">    
-                </div>
-                <canvas id="gameCanvas" width="300" height="300">
-
-                </canvas>
-                <div class="score-board">
-                    <h2>Score: <span id="score">0</span></h2>
-                    <button id="startButton">Start Game</button>
-                    <button id="pauseButton">Pause Game</button>
-                    <button id="resumeButton">Resume Game</button>
-                </div>
+      <section>
+        <div class="game-container">
+          <div class="game-info-container">
+            <div class="game-info">
+              <p>Snake Game</p>
+              <img src="images/download.png" alt="Snake" class="snake-image" />
             </div>
-        </section>
+            <div class="score-container">
+              <p>Score: <span id="score">0</span></p>
+              <p>High Score: <span id="highScore">0</span></p>
+            </div>
+          </div>
+
+          <div id="gameCanvas"></div>
+          <div class="game-controls">
+            <button id="startButton">Start Game</button>
+            <button id="pauseButton">Pause Game</button>
+            <button id="restartButton">Restart Game</button>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
-        <p>&copy; 2023 My Web Page</p>
+      <div class="footer-container">
+        <p>Developed by Jassim Algallaf</p>
+        <p>&copy; 2025 My Snake Game</p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
