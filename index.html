@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="app.js"></script>
+    <title>Snake Game</title>
+</head>
+<body>
+    <header>
+        <div class="Header">
+            <nav class="nav-bar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="snake.html">Snake Game</a></li>
+                    <li><a href="tetris.html">Tetris Game</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+                <img src="images/logo.png" alt="Logo" class="logo-image">
+        </div>  
+    </header>
+    <main>
+        <section>
+            <div class="game-container">
+                <div class="game-info">
+                    <h2>Snake Game</h2>
+                    <img src="images/snake.png" alt="Snake" class="snake-image">    
+                </div>
+                <canvas id="gameCanvas" width="300" height="300">
+
+                </canvas>
+                <div class="score-board">
+                    <h2>Score: <span id="score">0</span></h2>
+                    <button id="startButton">Start Game</button>
+                    <button id="pauseButton">Pause Game</button>
+                    <button id="resumeButton">Resume Game</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 My Web Page</p>
+    </footer>
+</body>
+</html>
