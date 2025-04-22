@@ -1,6 +1,6 @@
 Snake Game
 A classic Snake game built with HTML, CSS, and JavaScript, featuring a vibrant lime green checkerboard, custom snake and fruit images, and a responsive game-over overlay. Developed by Jassim Algallaf.
-Table of Contents
+Table of Contents 
 
 Features
 Demo
