@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 body {
     padding: 0;
     margin: 0;
@@ -7,6 +10,7 @@ body {
 }
 
 .Header {
+    color:#66b549;
     background-color: #edfbe0;
     color: rgb(0, 0, 0);
     text-align: center;
@@ -68,69 +72,63 @@ body {
 }
 
 .game-container {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     margin: 20px auto;
     background-color: rgb(62, 174, 77);
     border: #1f511f 10px solid;
     border-radius: 5px;
-    width: 50vw;
+    width: 32vw;
+    height: 60%;
 }
 
 .game-info-container {
     display: flex;
-    height: 12vh;
-    background-color: rgb(49, 132, 60);
-}
-
-.game-info {
-    display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
+    height: 12vh;
+    width:100%;
     background-color: rgb(49, 132, 60);
-    border-radius: 5px;
-    padding: 10px;
+    border-bottom: 2px solid #0d2610;
 }
 
-.game-info p {
+.gametitle {
     font-size: 20px;
     font-weight: bold;
     margin: 0;
     padding: 20px;
-    color: #ffffff;
+    color: #0d2610;
+}
+.score-container {
+    display:flex;
+    justify-content: flex-end;
+    gap:15px;
+}
+.score{
+    
+    margin-left:auto;
+    justify-content: right;
+    color:white;
+    padding: 10px;
 }
 
 .snake-image {
-    width: auto;
-    height: auto;
+    width: 80px;
+    height: 80px;
     object-fit: contain;
+    
 }
-
-.score-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: right;
-    gap: 20px;
-    background-color: rgb(49, 132, 60);
-}
-
-.score-container p {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 0;
-    color: #ffffff;
-}
-
 #gameCanvas {
     border: 2px solid #000000;
     background-color: #ffffff;
-    margin: 10px auto;
+    margin: 5px auto 0 auto;
     display: block;
-    width: 70%;
-    height: 400px;
+    width: 600px;
+    height: 600px;
     border-radius: 5px;
+    box-shadow: 0 0 20px #04a873;
 }
 
 .footer-container {
@@ -138,30 +136,30 @@ body {
     opacity: 0.9;
     bottom: 0;
     background-color: #edfbe0;
-    color: rgb(0, 0, 0);
+    color:#000000;
     text-align: center;
     line-height: 2px;
     padding: 10px 0;
 }
 
-#startButton {
-    background-color: #237530;
-    color: white;
-    border: 2px solid #195221;
-    font-weight: bold;
-    padding: 10px 20px;
-    margin: 20px 0;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
+/* #startButton { */
+    /* background-color: #237530; */
+    /* color: white; */
+    /* border: 2px solid #195221; */
+    /* font-weight: bold; */
+    /* padding: 10px 20px; */
+    /* margin: 20px 0; */
+    /* font-size: 16px; */
+    /* cursor: pointer; */
+    /* border-radius: 5px; */
+    /* transition: background-color 0.3s ease; */
+/* } */
 
-#startButton:hover {
-    background-color: #1b5523;
-    box-shadow: 0 2px 5px #000000;
-    transition: box-shadow 0.3s ease;
-}
+/* #startButton:hover { */
+    /* background-color: #1b5523; */
+    /* box-shadow: 0 2px 5px #000000; */
+    /* transition: box-shadow 0.3s ease; */
+/* } */
 
 #pauseButton {
     background-color: #4e98d9;
@@ -199,4 +197,77 @@ body {
     background-color: #c9302c;
     box-shadow: 0 2px 5px #000000;
     transition: box-shadow 0.3s ease;
+}
+@media only screen and (max-width: 780px) {
+    .Header{
+        font-size: 12px;
+        width:100%;
+    }
+    .nav-bar ul {
+        flex-direction: column;
+         
+        /* justify-content: center; */
+        /* align-items: center; */
+        /* text-align: center; */
+    }   
+    .nav-bar li {
+        
+        height: 6vh;
+        
+    }
+    .nav-bar li a {
+        width: 100vw;
+        padding: 10px;
+        font-size: 14px;
+    }
+    .logo-image {
+        height:100%;
+         width:100vw;
+    }
+    .game-container {
+        width: 90vw;
+    }
+    .game-info-container {
+        height: 10vh;
+        margin:0;
+    }
+    .game-info {
+        margin:0;
+        width:100%;
+    }
+    .snake-image{
+        width:40px;
+        height:40px;
+        
+    }
+    .game-info p {
+        
+        font-size: 12px;
+        padding: 5px;
+    }
+    .score-container p{
+        font-size: 12px;
+        gap: 2px;
+    }
+    #gameCanvas {
+        width: 80vw;
+        height: 70vh;
+    }
+    #startButton {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+    #pauseButton {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+    #restartButton {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+    .footer-container {
+        font-size: 12px;
+        padding: 5px 0;
+    }
+
 }

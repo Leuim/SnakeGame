@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="images/logo.png" /> <!-- Added favicon -->
+
     <script defer src="app.js"></script>
     <title>Snake Game</title>
   </head>
@@ -15,28 +17,28 @@
             <li><a href="#">Snake Game</a></li>
             <li><a href="#">How To Play</a></li>
             <li><a href="#">About</a></li>
+            <li><img src="images/logo.png" alt="Logo" class="logo-image" /></li>
           </ul>
         </nav>
-        <img src="images/logo.png" alt="Logo" class="logo-image" />
       </div>
     </header>
     <main>
       <section>
         <div class="game-container">
           <div class="game-info-container">
-            <div class="game-info">
-              <img src="images/download.png" alt="Snake" class="snake-image" />
-              <p>Snake Game</p>
-            </div>
-            <div class="score-container">
-              <p>Score: <span id="score">0</span></p>
-              <p>High Score: <span id="highScore">0</span></p>
-            </div>
+            <img src="images/snake.png" alt="Snake" class="snake-image" />
+            <p class="gameTitle">Snake Game</p>
+             <div class="score-container">
+            <p class="score">Score: <span id="score">0</span></p>
+            <img src="images/fruit.png" alt="Snake" class="snake-image" />
+
+            <p class="score">High Score: <span id="highScore">0</span></p>
+             </div>
           </div>
 
-          <div id="gameCanvas"></div>
+          <canvas id="gameCanvas" width="800" height="800"></canvas>
           <div class="game-controls">
-            <button id="startButton">Start Game</button>
+            <!-- <button id="startButton">Start Game</button> -->
             <button id="pauseButton">Pause Game</button>
             <button id="restartButton">Restart Game</button>
           </div>
